@@ -1,8 +1,11 @@
-<mat-grid-list cols="4" rowHeight="1:1" >
+<mat-grid-list cols="6" rowHeight="1:1" >
   <mat-grid-tile *ngFor="let pokemon of pokemon">
-    <a href="{{pokemon.url}}">
-      <span>{{pokemon.name}}</span>
-    </a>
+    <div class="pokemon-card">
+      <img src="https://img.pokemondb.net/sprites/home/normal/{{ pokemon.name }}.png" alt="">
+      <a mat-stroked-button href="{{pokemon.url}}">
+        <span>{{pokemon.name}}</span>
+      </a>
+    </div>
   </mat-grid-tile>
 </mat-grid-list>
 
